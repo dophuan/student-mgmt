@@ -1,0 +1,11 @@
+{
+    "title": "Đăng nhập",
+    "form": {
+        "account": "Tài khoản",
+        "password": "Mật khẩu"
+    },
+    "button": {
+        "remember_me": "Ghi nhớ đăng nhập",
+        "login": "Đăng nhập"
+    }
+}

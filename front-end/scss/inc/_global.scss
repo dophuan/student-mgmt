@@ -1,0 +1,37 @@
+html {
+  font-size: 10px;
+}
+
+.vs-hidden {
+  visibility: hidden;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  @include clearfix();
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Fix iOS auto apply style font phone number
+a[href^=tel] {
+  text-decoration:inherit;
+  color: inherit;
+}
+
+.hidden-tablet-up {
+  @include tablet-up() {
+    display: none;
+  }
+}
+
+.hidden-mobile-down {
+  @include mobile() {
+    display: none;
+  }
+}

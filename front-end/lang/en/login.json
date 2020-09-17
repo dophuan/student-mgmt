@@ -1,0 +1,11 @@
+{
+    "title": "Login",
+    "form": {
+        "account": "Account",
+        "password": "Password"
+    },
+    "button": {
+        "remember_me": "Remember Me",
+        "login": "Login"
+    }
+}

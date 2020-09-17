@@ -1,0 +1,128 @@
+@import "./mixins";
+
+@mixin mobile-xs() {
+  @include breakpoint($max: 320px) {
+    @content;
+  }
+}
+
+// Responsive by devices
+@mixin mobile-small() {
+  @include breakpoint($max: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @include breakpoint($max: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @include breakpoint($min: 768px, $max: 1199px) {
+    @content;
+  }
+}
+
+@mixin tablet-small() {
+  @include breakpoint($min: 768px, $max: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet-up() {
+  @include breakpoint($min: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-down() {
+  @include breakpoint($max: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @include breakpoint($min: 1200px) {
+    @content;
+  }
+}
+
+// resposive by Bootstrap
+
+@mixin absolute-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-middle() {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+@mixin absolute-fit() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@mixin ratio-frame($ratio) {
+  position: relative;
+  height: 0;
+  padding-bottom: 100% / $ratio;
+}
+
+@mixin hover() {
+  @include desktop() {
+    &:active,
+    &:hover {
+      @content;
+    }
+  }
+  @include tablet-down() {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin flex-row($items, $space) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 0 -$space;
+  margin-right: 0 -$space;
+
+  > * {
+    flex-basis: (100% / $items);
+    padding: 0 $space;
+  }
+}
+
+@mixin firefox() {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+@mixin semibold() {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/**
+ * Fix for demo static html
+ */
+@mixin is-demo-html() {
+  $self: &;
+  @at-root body.static-html {
+    #{$self} {
+      @content;
+    }
+  }
+}

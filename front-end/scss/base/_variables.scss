@@ -1,0 +1,97 @@
+// ============
+// Application variables
+// NOTE: 2019.08.29 donlq: Please change according to designs
+// ============
+
+$color-blue: #1D549A;
+$color-dark-blue: #091E3D;
+$color-orange: #EF4136;
+$color-sepia: #BC955B;
+$color-gray: #80818D;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-brown: #5E4F4A;
+$color-biege: #CFC3B3;
+
+$color-light: #d1e5fa;
+$color-light2: #EDF4FC;
+$color-green: #33CC95;
+$color-dark: #272F3F;
+$color-error: #dc3545;
+
+$bg-gray: #e5e5e5;
+
+$color-main: $color-blue;
+$color-sub: $color-green;
+$color-text:  $color-dark;
+$color-heading:  $color-dark;
+$color-link: $color-blue;
+
+$font-family: 'Roboto', sans-serif;
+
+$font-bold: 700;
+$font-semibold: 500;
+
+$z-index-header: 1020;
+$z-index-nav-sp: $z-index-header + 2;
+$z-index-loading: 1000;
+$z-index-modal: 1030;
+$z-index-overlay: $z-index-header + 1;
+$z-index-toast: 1040;
+
+$border-radius-button: .6rem;
+$border-radius-card: 16px;
+
+$header-height-desktop: 80px;
+$footer-height-desktop: 100px;
+$footer-height-mobile: 80px;
+
+// ============
+// Bootstrap 4 variables
+// NOTE: 2019.08.29 donlq: Please change according to designs
+// ============
+$font-size-base: 1.65rem;
+
+$grid-gutter-width: 30px;
+$grid-padding: $grid-gutter-width / 2;
+
+$grid-columns: 12;
+
+// default breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  xl: 1350px
+) !default;
+
+// Bootstrap colors
+$primary: $color-blue;
+$brand: $color-orange;
+$secondary: $color-green;
+$light: $color-light;
+
+$theme-colors: (   
+  "brand": $brand,
+);
+
+// ============
+// END Bootstrap 4 variables
+// ============
+$breakpoint-xs: 0;
+$breakpoint-sm: map-get($grid-breakpoints, "sm");
+$breakpoint-md: map-get($grid-breakpoints, "md");
+$breakpoint-lg: map-get($grid-breakpoints, "lg");
+$breakpoint-xl: map-get($grid-breakpoints, "xl");
+
+
+$font-color-default: #fff;
+$font-color-secondary: #505050;
+
+$primary-color: #50339A;
+$secondary-color: #FFD232;

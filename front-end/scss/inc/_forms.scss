@@ -1,0 +1,232 @@
+$input-background: #EDF4FC;
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control {
+  border: none;
+  background-color: $input-background;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 300;
+  color: $color-dark;
+  padding: 12px 17px;
+  border-radius: 2px;
+  @include helvetica();
+
+  &:focus,&:active {
+    color: $color-dark;
+  }
+
+  &::placeholder {
+    color: $color-gray;
+  }
+}
+
+.form-actions {
+  margin-top: 30px;
+}
+
+.form-group {
+  &.has-error {
+    .is-invalid {
+      background-image: none;
+      border-color: $color-error;
+      border-width: 1px;
+      border-style: solid;
+    }
+    .invalid-feedback {
+      display: inline-block;
+    }
+  }
+}
+
+.form-group {
+  &.has-error {
+    .bootstrap-select {
+      >.dropdown-toggle {
+        &.btn-light {
+          border-color: $color-error;
+          border-width: 1px;
+          border-style: solid;
+          &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+          }
+        }
+      }
+
+      &.show {
+        >.dropdown-toggle {
+          box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+        }
+      }
+    }
+  }
+}
+
+.select-wrapper {
+  .bootstrap-select {
+    width: 100% !important;
+    border-radius: 2px;
+
+    > select {
+      padding: 15px 17px !important;
+    }
+
+    >.dropdown-toggle {
+      border-radius: 2px;
+
+      &.btn-light {
+        background-color: $input-background;
+        font-family: $font-family;
+        font-size: 16px;
+        font-weight: 300;
+        color: $color-gray;
+        padding: 12px 17px;
+        height: 50px;
+        border: none;
+      }
+
+      &:not(:disabled):not(:disabled):active,
+      &:hover {
+        background-color: $input-background;
+        border-color: $input-background;
+        color: $color-gray;
+      }
+
+      &:focus {
+        outline: none !important;
+      }
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: $color-gray transparent transparent transparent;
+      }
+
+    }
+
+    .filter-option-inner-inner {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.show {
+      >.dropdown-toggle {
+        background-color: $color-white;
+        border-color: $input-background;
+        color: $color-gray;
+        box-shadow: 0 0 0 0.2rem rgba(29,84,154, 0.25);
+
+        &:after {
+          border-width: 0 5px 5px 5px;
+          border-color: transparent transparent $color-gray transparent;
+        }
+      }
+    }
+
+    &.has-selected:not(.show) {
+      >.dropdown-toggle {
+        background-color: $color-white;
+        border-color: $input-background;
+        color: $color-gray;
+      }
+    }
+
+    .dropdown-menu {
+      margin-top: 5px;
+      padding: 5px;
+      border: 0;
+      border-radius: 2px;
+      font-size: 16px;
+      box-shadow: 0px 15px 50px rgba(40, 48, 64, 0.1), 0px -5px 20px rgba(40, 48, 64, 0.02);
+      z-index: 9999;
+
+      li {
+        a {
+          border-radius: 2px;
+          padding: 8px 10px;
+          margin-bottom: 2px;
+          color: $color-dark;
+
+          &:hover {
+            background-color: $input-background;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          &.blank-option {
+            display: none;
+            pointer-events: none;
+          }
+        }
+      }
+
+      .selected {
+        .dropdown-item.selected {
+          color: $color-blue;
+          font-weight: 500;
+
+          @include semibold();
+        }
+
+        span.check-mark {
+          display: none;
+        }
+      }
+
+      .dropdown-item {
+        &:active,
+        &.active,
+        &:focus {
+          background: $input-background;
+          color: $color-blue;
+        }
+
+        &.active {
+          @include semibold();
+        }
+      }
+    }
+
+    .no-results {
+      background-color: transparent;
+      color: $color-blue;
+    }
+
+    &.is-selected {
+      >.dropdown-toggle {
+        &.btn-light {
+          color: $color-dark;
+        }
+      }
+    }
+  }
+
+  @include mobile-small() {
+    .bootstrap-select {
+      .dropdown-menu {
+        transform: translate3d(0, 0, 0) !important;
+        height: auto !important;
+        top: auto !important;
+        bottom: 100%;
+        width: 100%;
+
+        li {
+          a {
+            span.text {
+              white-space: normal;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
